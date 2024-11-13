@@ -1,4 +1,4 @@
-console.log("Starting");
+// console.log("Checking then Starting to apply changes");
 
 let editingRow = null;
 
