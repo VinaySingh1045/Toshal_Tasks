@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div>
+            <label for="number">Number:</label>
+            <input type="tel" id="number" name="number" placeholder="Enter your number" required>
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+        
+        <button id="submit">Submit</button>
+    </form>
+    <button id="ageBtn">Age_greater_18</button>
+    <button id="age_less_Btn">Age_less_equal_18</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="results-table">
+            <!-- Results will be dynamically added here -->
+
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
