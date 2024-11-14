@@ -94,10 +94,10 @@ document.querySelector("#ageBtn").addEventListener("click", () => {
         let age = selectRow[i].querySelectorAll("td")[3].textContent;
         // console.log(age);
 
-        if(age<=18){
+        if (age <= 18) {
             selectRow[i].style.display = "none";
         }
-        else{
+        else {
             selectRow[i].style.display = "";
         }
 
@@ -111,13 +111,37 @@ document.querySelector("#age_less_Btn").addEventListener("click", () => {
         let age = selectRow[i].querySelectorAll("td")[3].textContent;
         // console.log(age);
 
-        if(age>18){
+        if (age > 18) {
             selectRow[i].style.display = "none";
         }
-        else{
+        else {
             selectRow[i].style.display = "";
         }
 
     }
 
 })
+
+// document.querySelectorAll('table')
+
+document.querySelector("#search").addEventListener("input", (e) => {
+    let searchQurey = e.target.value.toLowerCase()
+
+    let rows = document.querySelectorAll("#results-table tr")
+    // console.log(selectRow[1].textContent);
+
+    rows.forEach(row => {
+        let matchFound = false;
+        row.querySelectorAll("td").forEach(cell => {
+            if (cell.textContent.toLowerCase().includes(searchQurey)) {
+                matchFound = true;
+            }
+        });
+        row.style.display = matchFound ? "" : "none";
+    });
+
+
+})
+
+
+
