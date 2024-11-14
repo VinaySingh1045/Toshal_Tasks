@@ -16,7 +16,7 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     } else {
 
         let newRow = document.createElement("tr");
-
+        newRow.className = "hover:bg-gray-100 even:bg-gray-50";
         // let nameCell = document.createElement("td");
         // nameCell.textContent = name;
         // newRow.appendChild(nameCell);
@@ -34,10 +34,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
 
         // Create "Action" cell with Edit and Delete buttons
         let actionCell = document.createElement("td");
+        actionCell.className = "py-3 px-6 flex space-x-2";
 
         // Edit button
         let editButton = document.createElement("button");
         editButton.textContent = "Edit";
+        editButton.className = "bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600";
         editButton.addEventListener("click", () => {
             editRow(newRow)
         })
@@ -48,6 +50,7 @@ document.querySelector("#submit").addEventListener("click", (e) => {
 
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
+        deleteButton.className = "bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600";
         deleteButton.addEventListener("click", () => {
             newRow.remove();
         })
